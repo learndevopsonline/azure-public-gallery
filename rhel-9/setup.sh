@@ -16,7 +16,7 @@ done
 dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm -y
 
 ## Install Dependency Packages
-dnf install gcc gzip make procps socat tar wget net-tools bind-utils sshpass jq nmap telnet unzip -y
+dnf install vim gcc gzip make procps socat tar wget net-tools bind-utils sshpass jq nmap telnet unzip -y
 
 ## Check ROOT USER
 if [ $(id -u) -ne 0 ]; then
@@ -88,7 +88,7 @@ echo ':programname, isequal, "systemd-sysv-generator" /var/log/sysv.log
 & stop' >/etc/rsyslog.d/01-sysv.conf
 
 # Commands to /bin
-cp /tmp/azure-public-gallery/rhel-9/files/set-hostname /bin/set-prompt
+cp /tmp/azure-public-gallery/rhel-9/files/set-prompt /bin/set-prompt
 cp /tmp/azure-public-gallery/rhel-9/files/mysql_secure_installation /usr/sbin/mysql_secure_installation
 chmod +x /bin/set-prompt /usr/sbin/mysql_secure_installation
 sed -i -e '/aws-hostname/ d' -e '$ a r /tmp/aws-hostname' /usr/lib/tmpfiles.d/tmp.conf
