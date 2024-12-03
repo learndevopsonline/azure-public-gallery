@@ -16,7 +16,7 @@ done
 dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm -y
 
 ## Install Dependency Packages
-dnf install vim gcc gzip make procps socat tar wget net-tools bind-utils sshpass jq nmap telnet unzip -y
+dnf install vim-enhanced gcc gzip make procps socat tar wget net-tools bind-utils sshpass jq nmap telnet unzip -y
 
 ## Check ROOT USER
 if [ $(id -u) -ne 0 ]; then
