@@ -61,6 +61,7 @@ sed -i -e '/^PasswordAuthentication/ c PasswordAuthentication yes' -e '/^PermitR
 sed -i -e '/PrintMotd/ c PrintMotd yes' /etc/ssh/sshd_config.d/50-redhat.conf
 cp /tmp/azure-public-gallery/rhel-9/files/04-ssh-config.conf /etc/ssh/ssh_config.d/04-ssh-config.conf
 cp /tmp/azure-public-gallery/rhel-9/files/motd /etc/motd
+sed -i -e '/pam_motd/ d' /etc/pam.d/sshd
 
 
 # Setup Default SSH Keys
